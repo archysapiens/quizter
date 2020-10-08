@@ -1,5 +1,6 @@
 package archy.soft.quizter.model;
 
+
 import java.util.Calendar;
 
 import javax.persistence.Column;
@@ -12,31 +13,32 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity(name = "preguntas")
-public class Preguntas {
+@Entity(name = "evaluaciones")
+public class Evaluaciones {
 	
 	@Id 
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column
-	private String pregunta;
-	@Column
-    private int tipo_respuesta;
-	@Column
-	private char status;
+	private int respuesta;
 	@Column
 	@Temporal(TemporalType.DATE)
-	private Calendar fecha_actualizacion;
+	private Calendar fecha_aplicacion;
+	@Column
+	@Temporal(TemporalType.DATE)
+	private Calendar fecha_evaluacion;
 	@ManyToOne
-	@JoinColumn(name = "tema_id")
-	Tema tema;
-	
-	//@Column
-	//private int users_id;
-	//@ManyToOne
-	//@JoinColumn(name = "users_id")
-	//Users users;      
-	
-	
+	@JoinColumn(name = "respuestas_id_respuestas")
+	Respuestas respuestas;   
+	@ManyToOne
+	@JoinColumn(name = "preguntas_id")
+	Preguntas preguntas; 
+	@Column
+	private char inciso;   
+	@ManyToOne
+	@JoinColumn(name = "examen_id")
+	Examen examen;
+
+
 }
