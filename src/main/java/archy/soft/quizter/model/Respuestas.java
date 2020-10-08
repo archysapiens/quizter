@@ -16,6 +16,7 @@ import javax.persistence.TemporalType;
 
 @Entity(name = "respuestas")
 public class Respuestas {
+	
 	@Id 
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +33,42 @@ public class Respuestas {
 	@ManyToOne
 	@JoinColumn(name = "preguntas_id")
 	Preguntas preguntas;
+	public int getId_respuesta() {
+		return id_respuesta;
+	}
+	public void setId_respuesta(int id_respuesta) {
+		this.id_respuesta = id_respuesta;
+	}
+	public String getOpcion() {
+		return opcion;
+	}
+	public void setOpcion(String opcion) {
+		this.opcion = opcion;
+	}
+	public char getTipo_opcion() {
+		return tipo_opcion;
+	}
+	public void setTipo_opcion(char tipo_opcion) {
+		this.tipo_opcion = tipo_opcion;
+	}
+	public char getStatus() {
+		return status;
+	}
+	public void setStatus(char status) {
+		this.status = status;
+	}
+	public Calendar getFecha_actualizacion() {
+		return fecha_actualizacion;
+	}
+	public void setFecha_actualizacion(Calendar fecha_actualizacion) {
+		this.fecha_actualizacion = fecha_actualizacion;
+	}
+	public Preguntas getPreguntas() {
+		return preguntas;
+	}
+	public void setPreguntas(Preguntas preguntas) {
+		this.preguntas = preguntas;
+	}
 	
 	
 }

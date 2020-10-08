@@ -17,5 +17,20 @@ public class Tema {
 	@Column
 	private String tema;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getTema() {
+		return tema;
+	}
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+	
+	
+	
 
 }

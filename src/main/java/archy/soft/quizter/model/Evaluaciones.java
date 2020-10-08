@@ -39,6 +39,56 @@ public class Evaluaciones {
 	@ManyToOne
 	@JoinColumn(name = "examen_id")
 	Examen examen;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getRespuesta() {
+		return respuesta;
+	}
+	public void setRespuesta(int respuesta) {
+		this.respuesta = respuesta;
+	}
+	public Calendar getFecha_aplicacion() {
+		return fecha_aplicacion;
+	}
+	public void setFecha_aplicacion(Calendar fecha_aplicacion) {
+		this.fecha_aplicacion = fecha_aplicacion;
+	}
+	public Calendar getFecha_evaluacion() {
+		return fecha_evaluacion;
+	}
+	public void setFecha_evaluacion(Calendar fecha_evaluacion) {
+		this.fecha_evaluacion = fecha_evaluacion;
+	}
+	public Respuestas getRespuestas() {
+		return respuestas;
+	}
+	public void setRespuestas(Respuestas respuestas) {
+		this.respuestas = respuestas;
+	}
+	public Preguntas getPreguntas() {
+		return preguntas;
+	}
+	public void setPreguntas(Preguntas preguntas) {
+		this.preguntas = preguntas;
+	}
+	public char getInciso() {
+		return inciso;
+	}
+	public void setInciso(char inciso) {
+		this.inciso = inciso;
+	}
+	public Examen getExamen() {
+		return examen;
+	}
+	public void setExamen(Examen examen) {
+		this.examen = examen;
+	}
+	
+	
 
 
 }

@@ -32,11 +32,56 @@ public class Preguntas {
 	@JoinColumn(name = "tema_id")
 	Tema tema;
 	
-	//@Column
-	//private int users_id;
-	//@ManyToOne
-	//@JoinColumn(name = "users_id")
-	//Users users;      
+	@ManyToOne
+    @JoinColumn(name = "users_id")
+    Users users; 
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getPregunta() {
+		return pregunta;
+	}
+	public void setPregunta(String pregunta) {
+		this.pregunta = pregunta;
+	}
+	public int getTipo_respuesta() {
+		return tipo_respuesta;
+	}
+	public void setTipo_respuesta(int tipo_respuesta) {
+		this.tipo_respuesta = tipo_respuesta;
+	}
+	public char getStatus() {
+		return status;
+	}
+	public void setStatus(char status) {
+		this.status = status;
+	}
+	public Calendar getFecha_actualizacion() {
+		return fecha_actualizacion;
+	}
+	public void setFecha_actualizacion(Calendar fecha_actualizacion) {
+		this.fecha_actualizacion = fecha_actualizacion;
+	}
+	public Tema getTema() {
+		return tema;
+	}
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
+	public Users getUsers() {
+		return users;
+	}
+	public void setUsers(Users users) {
+		this.users = users;
+	}
+	
+
+	     
 	
 	
 }
