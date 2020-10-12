@@ -90,8 +90,4 @@ public class Evaluaciones {
 	public void setExamen(Examen examen) {
 		this.examen = examen;
 	}
-	
-	
-
-
 }

@@ -81,10 +81,4 @@ public class Preguntas {
 	public void setUsuariosv1(Usuariosv1 usuariosv1) {
 		this.usuariosv1 = usuariosv1;
 	}
-	
-	
-
-	     
-	
-	
 }

@@ -70,7 +70,5 @@ public class Respuestas {
 	}
 	public void setPreguntas(Preguntas preguntas) {
 		this.preguntas = preguntas;
-	}
-	
-	
+	}	
 }

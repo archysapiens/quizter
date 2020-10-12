@@ -31,8 +31,4 @@ public class Tema {
 	public void setTema(String tema) {
 		this.tema = tema;
 	}
-	
-	
-	
-
 }
