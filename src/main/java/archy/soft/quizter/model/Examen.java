@@ -109,12 +109,12 @@ public class Examen {
 	public void setUser_id2(int user_id2) {
 		this.user_id2 = user_id2;
 	}
-	//public Users getUsers() {
-	//	return users;
-	//}
-	//public void setUsers(Users users) {
-	//	this.users = users;
-	//}
+	public Users getUsers() {
+		return users;
+	}
+	public void setUsers(Users users) {
+		this.users = users;
+	}
 	
 	
 	
