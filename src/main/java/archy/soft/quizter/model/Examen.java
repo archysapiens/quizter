@@ -44,13 +44,15 @@ public class Examen {
 	private char status; 
 	@Column
 	private int user_id2;                    
+	
 	@ManyToOne
     @JoinColumn(name = "users_id")
-	Usuariov1 usuariov1;
-	public int getExamen_id() {
+	Users users;
+	
+	public int getId() {
 		return examen_id;
 	}
-	public void setExamen_id(int examen_id) {
+	public void setId(int examen_id) {
 		this.examen_id = examen_id;
 	}
 	public Calendar getFecha_aplicacion() {
@@ -107,10 +109,15 @@ public class Examen {
 	public void setUser_id2(int user_id2) {
 		this.user_id2 = user_id2;
 	}
-	public Usuariov1 getUsuariosv1() {
-		return usuariov1;
-	}
-	public void setUsuariosv1(Usuariov1 usuariov1) {
-		this.usuariov1 = usuariov1;
-	}
+	//public Users getUsers() {
+	//	return users;
+	//}
+	//public void setUsers(Users users) {
+	//	this.users = users;
+	//}
+	
+	
+	
+	
+
 }
