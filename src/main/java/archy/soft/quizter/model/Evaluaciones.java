@@ -10,35 +10,38 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity(name = "evaluaciones")
+@Entity
+@Table(name = "evaluaciones")
 public class Evaluaciones {
 	
 	@Id 
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column
+	@Column(unique = true, nullable = false)
 	private int respuesta;
-	@Column
+	@Column(unique = true, nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Calendar fecha_aplicacion;
-	@Column
+	@Column(unique = true , nullable = true)
 	@Temporal(TemporalType.DATE)
 	private Calendar fecha_evaluacion;
 	@ManyToOne
-	@JoinColumn(name = "respuestas_id_respuestas")
-	Respuestas respuestas;   
+	@JoinColumn(name = "id_respuesta" , nullable = false)
+	private Respuestas respuestas;   
+	
 	@ManyToOne
-	@JoinColumn(name = "preguntas_id")
-	Preguntas preguntas; 
-	@Column
+	@JoinColumn(name = "preguntas_id", nullable = false)
+	private Preguntas preguntas; 
+	@Column(unique = true, nullable = true, length = 1)
 	private char inciso;   
 	@ManyToOne
-	@JoinColumn(name = "examen_id")
-	Examen examen;
+	@JoinColumn(name = "examen_id", unique = true, nullable = false)
+	private Examen examen;
 	public int getId() {
 		return id;
 	}

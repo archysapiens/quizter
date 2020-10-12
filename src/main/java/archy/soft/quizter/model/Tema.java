@@ -5,9 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
-@Entity(name ="tema")
+@Entity
+@Table(name ="tema")
 public class Tema {
 	
 	@Id 

@@ -9,16 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity(name = "examen")
+@Entity
+@Table(name = "examen")
 public class Examen {
 	
 	@Id 
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int examen_id;
 	@Column
 	@Temporal(TemporalType.DATE)
 	private Calendar fecha_aplicacion;
@@ -42,16 +44,14 @@ public class Examen {
 	private char status; 
 	@Column
 	private int user_id2;                    
-	
 	@ManyToOne
     @JoinColumn(name = "users_id")
-	Users users;
-	
-	public int getId() {
-		return id;
+	Usuariosv1 usuariosv1;
+	public int getExamen_id() {
+		return examen_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setExamen_id(int examen_id) {
+		this.examen_id = examen_id;
 	}
 	public Calendar getFecha_aplicacion() {
 		return fecha_aplicacion;
@@ -107,12 +107,14 @@ public class Examen {
 	public void setUser_id2(int user_id2) {
 		this.user_id2 = user_id2;
 	}
-	public Users getUsers() {
-		return users;
+	public Usuariosv1 getUsuariosv1() {
+		return usuariosv1;
 	}
-	public void setUsers(Users users) {
-		this.users = users;
+	public void setUsuariosv1(Usuariosv1 usuariosv1) {
+		this.usuariosv1 = usuariosv1;
 	}
+	
+	
 	
 	
 	

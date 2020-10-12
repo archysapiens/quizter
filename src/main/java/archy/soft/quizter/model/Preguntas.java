@@ -9,16 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity(name = "preguntas")
+@Entity
+@Table(name = "preguntas")
 public class Preguntas {
 	
 	@Id 
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int preguntas_id;
 	@Column
 	private String pregunta;
 	@Column
@@ -34,14 +36,14 @@ public class Preguntas {
 	
 	@ManyToOne
     @JoinColumn(name = "users_id")
-    Users users; 
+	Usuariosv1 usuariosv1; 
 	
 	
 	public int getId() {
-		return id;
+		return preguntas_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int preguntas_id) {
+		this.preguntas_id = preguntas_id;
 	}
 	public String getPregunta() {
 		return pregunta;
@@ -73,12 +75,13 @@ public class Preguntas {
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
-	public Users getUsers() {
-		return users;
+	public Usuariosv1 getUsuariosv1() {
+		return usuariosv1;
 	}
-	public void setUsers(Users users) {
-		this.users = users;
+	public void setUsuariosv1(Usuariosv1 usuariosv1) {
+		this.usuariosv1 = usuariosv1;
 	}
+	
 	
 
 	     
