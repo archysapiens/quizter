@@ -36,7 +36,7 @@ public class Preguntas {
 	
 	@ManyToOne
     @JoinColumn(name = "users_id")
-	Usuariosv1 usuariosv1; 
+	Usuariov1 usuariov1; 
 	
 	
 	public int getId() {
@@ -75,10 +75,10 @@ public class Preguntas {
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
-	public Usuariosv1 getUsuariosv1() {
-		return usuariosv1;
+	public Usuariov1 getUsuariosv1() {
+		return usuariov1;
 	}
-	public void setUsuariosv1(Usuariosv1 usuariosv1) {
-		this.usuariosv1 = usuariosv1;
+	public void setUsuariov1(Usuariov1 usuariov1) {
+		this.usuariov1 = usuariov1;
 	}
 }
