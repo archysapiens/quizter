@@ -47,7 +47,7 @@ public class Examen {
 	
 	@ManyToOne
     @JoinColumn(name = "users_id")
-	Users users;
+	users users;
 	
 	public int getId() {
 		return examen_id;
@@ -109,10 +109,10 @@ public class Examen {
 	public void setUser_id2(int user_id2) {
 		this.user_id2 = user_id2;
 	}
-	public Users getUsers() {
+	public users getUsers() {
 		return users;
 	}
-	public void setUsers(Users users) {
+	public void setUsers(users users) {
 		this.users = users;
 	}
 	
