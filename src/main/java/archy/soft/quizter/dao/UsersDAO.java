@@ -1,0 +1,16 @@
+package archy.soft.quizter.dao;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+import archy.soft.quizter.model.users;
+
+
+public interface UsersDAO extends CrudRepository<users, Integer>{
+	List<users> findAll();
+	Optional<users> findById(Integer id);
+	@SuppressWarnings("unchecked")
+	users save(users p);
+	void delete(users p);
+}
