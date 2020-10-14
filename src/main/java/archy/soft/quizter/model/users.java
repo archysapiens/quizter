@@ -27,10 +27,10 @@ public class users {
 	private String apm;
 	
 	@Column(nullable=false, length = 13)
-	private char rfc;
+	private String rfc;
 	
 	@Column(nullable=false, length = 18)
-	private char curp;
+	private String curp;
 
 	public int getId() {
 		return id;
@@ -64,19 +64,19 @@ public class users {
 		this.apm = apm;
 	}
 
-	public char getRfc() {
+	public String getRfc() {
 		return rfc;
 	}
 
-	public void setRfc(char rfc) {
+	public void setRfc(String rfc) {
 		this.rfc = rfc;
 	}
 
-	public char getCurp() {
+	public String getCurp() {
 		return curp;
 	}
 
-	public void setCurp(char curp) {
+	public void setCurp(String curp) {
 		this.curp = curp;
 	}
 	
