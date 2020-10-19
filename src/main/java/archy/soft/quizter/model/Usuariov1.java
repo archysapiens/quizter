@@ -1,13 +1,10 @@
 package archy.soft.quizter.model;
 
-<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-=======
-import javax.persistence.Entity;
->>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,7 +13,6 @@ import javax.persistence.Table;
 public class Usuariov1 {
 
 	@Id
-<<<<<<< HEAD
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -27,18 +23,9 @@ public class Usuariov1 {
 	@Column
 	private String apm;
 	@Column
-	private char rfc;
+	private String rfc;
 	@Column
-	private char curp;
-	
-=======
-	private int id;
-	private String nombre;
-	private String app;
-	private String apm;
-	private char rfc;
-	private char curp;
->>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
+	private String curp;
 	public int getId() {
 		return id;
 	}
@@ -63,16 +50,16 @@ public class Usuariov1 {
 	public void setApm(String apm) {
 		this.apm = apm;
 	}
-	public char getRfc() {
+	public String getRfc() {
 		return rfc;
 	}
-	public void setRfc(char rfc) {
+	public void setRfc(String rfc) {
 		this.rfc = rfc;
 	}
-	public char getCurp() {
+	public String getCurp() {
 		return curp;
 	}
-	public void setCurp(char curp) {
+	public void setCurp(String curp) {
 		this.curp = curp;
 	}
 }

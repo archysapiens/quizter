@@ -2,8 +2,8 @@ package archy.soft.quizter.service;
 
 import java.util.List;
 
-import archy.soft.quizter.model.users;
 
+import archy.soft.quizter.model.users;
 
 
 public interface UsersService {

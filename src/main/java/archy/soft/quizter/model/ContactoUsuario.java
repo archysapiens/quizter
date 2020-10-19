@@ -1,13 +1,11 @@
 package archy.soft.quizter.model;
 
-<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-=======
-import javax.persistence.Entity;
->>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
+
+
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,11 +16,8 @@ import javax.persistence.Table;
 public class ContactoUsuario {
 	
 	@Id
-<<<<<<< HEAD
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-=======
->>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
 	private int idCont;
 	@ManyToOne
 	@JoinColumn(name = "catalogo_contactov1_id")
