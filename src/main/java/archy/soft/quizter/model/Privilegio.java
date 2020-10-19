@@ -2,11 +2,15 @@ package archy.soft.quizter.model;
 
 import java.util.Calendar;
 
+<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+=======
+import javax.persistence.Entity;
+>>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -16,18 +20,26 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "privilegios")
 public class Privilegio {
+<<<<<<< HEAD
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id; 
 	@Column
+=======
+	
+>>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
 	private String estatus;
 	@Temporal(TemporalType.DATE)
 	private Calendar fecha_actualizacion;
 	
 	@ManyToOne
 	@JoinColumn(name = "users_id")
+<<<<<<< HEAD
 	private users user;
+=======
+	private User user;
+>>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
 	
 	@ManyToOne
 	@JoinColumn(name = "roles_id")
@@ -37,6 +49,7 @@ public class Privilegio {
 	@JoinColumn(name = "modulos_id")
 	private Modulo modul;
 
+<<<<<<< HEAD
 	
 	
 	public int getId() {
@@ -47,6 +60,8 @@ public class Privilegio {
 		this.id = id;
 	}
 
+=======
+>>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
 	public String getEstatus() {
 		return estatus;
 	}
@@ -55,6 +70,7 @@ public class Privilegio {
 		this.estatus = estatus;
 	}
 
+<<<<<<< HEAD
 	public Calendar getFecha_actualizacion() {
 		return fecha_actualizacion;
 	}
@@ -68,6 +84,21 @@ public class Privilegio {
 	}
 
 	public void setUser(users user) {
+=======
+	public String getFecha_actualizacion() {
+		return fecha_actualizacion;
+	}
+
+	public void setFecha_actualizacion(String fecha_actualizacion) {
+		this.fecha_actualizacion = fecha_actualizacion;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+>>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
 		this.user = user;
 	}
 
@@ -87,5 +118,8 @@ public class Privilegio {
 		this.modul = modul;
 	}
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> ddf02acce94ba684eaa3d9d03791578890a53b00
 }
