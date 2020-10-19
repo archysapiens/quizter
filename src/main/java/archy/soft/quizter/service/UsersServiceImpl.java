@@ -1,6 +1,5 @@
 package archy.soft.quizter.service;
-  
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +17,13 @@ public class UsersServiceImpl implements UsersService{
 	@Override
 	public List<users> listar() {
 		// TODO Auto-generated method stub
-		List<users> list = new ArrayList<>();
-		dao.findAll().forEach(e -> list.add(e));
-		//return dao.findAll();
-		return list;
+		return dao.findAll();
 	}
 
 	@Override
 	public users listarId(int id) {
 		// TODO Auto-generated method stub
-		users obj = dao.findById(id);
-		return obj;
+		return dao.findById(id);
 	}
 
 	@Override
@@ -40,12 +35,13 @@ public class UsersServiceImpl implements UsersService{
 	@Override
 	public users edit(users p) {
 		// TODO Auto-generated method stub
-		return dao.save(p);
+		return null;
 	}
 
 	@Override
-	public void delete(int id) {
-		dao.delete(listarId(id));
+	public users delete(int id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
