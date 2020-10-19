@@ -13,51 +13,42 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import archy.soft.quizter.model.users;
-import archy.soft.quizter.service.UsersService;
 
 
+import archy.soft.quizter.model.Usuariov1;
+import archy.soft.quizter.service.Usuariov1Service;
 
 @RestController
-@RequestMapping("/users")
-public class ControllerMain {
-
-	private static Logger log = LoggerFactory.getLogger(ControllerMain.class);
+@RequestMapping("/usuariov1")
+public class ControllerUsuariov1 {
+	private static Logger log = LoggerFactory.getLogger(ControllerTema.class);
 	
 	@Autowired
-	//private UsersServiceImpl service;
-	UsersService service;
+	Usuariov1Service service;
 	
-	
-	@GetMapping("users/{id}")
-	public users listarById(@PathVariable("id") Integer id){
-		users user = service.listarId(id);
+	@GetMapping("usuariov1/{id}")
+	public Usuariov1 listarById(@PathVariable("id") Integer id) {
+		Usuariov1 user = service.listarById(id);
 		return user;
-		
 	}
 	
 	@GetMapping
-	public List<users> listar(){
+	public List<Usuariov1> listar(){
 		return service.listar();
 	}
 	
 	@PostMapping
-	public users agregar(@RequestBody users p) {
-		
-		log.info("agregar {} --  {}",p.getNombre(), p.getApm());
-		return service.add(p);
+	public Usuariov1 agregar(@RequestBody Usuariov1 u) {
+		log.info("agregar {} --  {}",u.getId(), u.getNombre());
+		return service.agregar(u);
 	}
 	
-
-	@PutMapping
-	public users edit(@RequestBody users user){
-		
-		return service.edit(user);
+	@PutMapping Usuariov1 edit(@RequestBody Usuariov1 user) {
+		return service.editar(user);
 	}
 	
-	@DeleteMapping("users/{id}")
+	@DeleteMapping("usuariov1/{id}")
 	public void delete(@PathVariable("id") Integer id) {
 		service.delete(id);
 	}
-
 }

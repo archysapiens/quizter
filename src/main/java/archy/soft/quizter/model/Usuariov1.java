@@ -22,9 +22,9 @@ public class Usuariov1 {
 	@Column
 	private String apm;
 	@Column
-	private char rfc;
+	private String rfc;
 	@Column
-	private char curp;
+	private String curp;
 	
 	public int getId() {
 		return id;
@@ -50,16 +50,16 @@ public class Usuariov1 {
 	public void setApm(String apm) {
 		this.apm = apm;
 	}
-	public char getRfc() {
+	public String getRfc() {
 		return rfc;
 	}
-	public void setRfc(char rfc) {
+	public void setRfc(String rfc) {
 		this.rfc = rfc;
 	}
-	public char getCurp() {
+	public String getCurp() {
 		return curp;
 	}
-	public void setCurp(char curp) {
+	public void setCurp(String curp) {
 		this.curp = curp;
 	}
 }

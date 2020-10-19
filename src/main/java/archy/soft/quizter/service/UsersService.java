@@ -1,10 +1,7 @@
 package archy.soft.quizter.service;
 
 import java.util.List;
-
 import archy.soft.quizter.model.users;
-
-
 
 public interface UsersService {
 
@@ -12,5 +9,5 @@ public interface UsersService {
 	users listarId(int id);
 	users add(users p);
 	users edit(users p);
-	users delete(int id);
+	void delete(int id);
 }
