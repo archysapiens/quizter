@@ -1,6 +1,7 @@
 package archy.soft.quizter.model;
 
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,21 +24,21 @@ public class Examen {
 	private int examen_id;
 	@Column
 	@Temporal(TemporalType.DATE)
-	private Calendar fecha_aplicacion;
+	private Date fecha_aplicacion;
 	@Column
     private int tiempo_limite;
 	@Column
 	@Temporal(TemporalType.DATE)
-	private Calendar fecha_hora_inicio;
+	private Date fecha_hora_inicio;
 	@Column
 	@Temporal(TemporalType.DATE)
-	private Calendar fecha_hora_fin;  
+	private Date fecha_hora_fin;  
 	@Column
 	@Temporal(TemporalType.DATE)
-	private Calendar fecha_vigencia_inicio; 
+	private Date fecha_vigencia_inicio; 
 	@Column
 	@Temporal(TemporalType.DATE)
-	private Calendar fecha_vigencia_fin;                    
+	private Date fecha_vigencia_fin;                    
 	@Column
 	private int resultado;  
 	@Column
@@ -55,10 +56,10 @@ public class Examen {
 	public void setId(int examen_id) {
 		this.examen_id = examen_id;
 	}
-	public Calendar getFecha_aplicacion() {
+	public Date getFecha_aplicacion() {
 		return fecha_aplicacion;
 	}
-	public void setFecha_aplicacion(Calendar fecha_aplicacion) {
+	public void setFecha_aplicacion(Date fecha_aplicacion) {
 		this.fecha_aplicacion = fecha_aplicacion;
 	}
 	public int getTiempo_limite() {
@@ -67,28 +68,28 @@ public class Examen {
 	public void setTiempo_limite(int tiempo_limite) {
 		this.tiempo_limite = tiempo_limite;
 	}
-	public Calendar getFecha_hora_inicio() {
+	public Date getFecha_hora_inicio() {
 		return fecha_hora_inicio;
 	}
-	public void setFecha_hora_inicio(Calendar fecha_hora_inicio) {
+	public void setFecha_hora_inicio(Date fecha_hora_inicio) {
 		this.fecha_hora_inicio = fecha_hora_inicio;
 	}
-	public Calendar getFecha_hora_fin() {
+	public Date getFecha_hora_fin() {
 		return fecha_hora_fin;
 	}
-	public void setFecha_hora_fin(Calendar fecha_hora_fin) {
+	public void setFecha_hora_fin(Date fecha_hora_fin) {
 		this.fecha_hora_fin = fecha_hora_fin;
 	}
-	public Calendar getFecha_vigencia_inicio() {
+	public Date getFecha_vigencia_inicio() {
 		return fecha_vigencia_inicio;
 	}
-	public void setFecha_vigencia_inicio(Calendar fecha_vigencia_inicio) {
+	public void setFecha_vigencia_inicio(Date fecha_vigencia_inicio) {
 		this.fecha_vigencia_inicio = fecha_vigencia_inicio;
 	}
-	public Calendar getFecha_vigencia_fin() {
+	public Date getFecha_vigencia_fin() {
 		return fecha_vigencia_fin;
 	}
-	public void setFecha_vigencia_fin(Calendar fecha_vigencia_fin) {
+	public void setFecha_vigencia_fin(Date fecha_vigencia_fin) {
 		this.fecha_vigencia_fin = fecha_vigencia_fin;
 	}
 	public int getResultado() {
