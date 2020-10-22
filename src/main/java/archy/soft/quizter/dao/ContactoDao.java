@@ -14,5 +14,7 @@ public interface ContactoDao extends CrudRepository<Dcontacto, Integer> {
 	@SuppressWarnings("unchecked")
 	Dcontacto save(Dcontacto p);
 	void delete(Dcontacto p);
+	
+	
 
 }
